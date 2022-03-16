@@ -1,0 +1,94 @@
+.header{
+text-align:center;
+color:black;
+background-color: antiquewhite;
+margin-top: 0;
+}
+
+.footer{
+color:blue;
+position:fixed;
+/* left:45%; */
+text-align: center;
+top:auto;
+bottom:0;
+margin-bottom: 0;
+min-height: 10vh;
+/* background-color: black; */
+width: 100%;
+}
+
+.complete-footer{
+    background-color: antiquewhite;
+}
+
+ul{
+    list-style-type: none;
+    
+}
+
+li{
+    display:inline;
+    margin: 10px;
+}
+
+button{
+    cursor: pointer;
+    font-size: 15px;
+    /* cursor:all-scroll; */
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+    height: 30px;
+}
+
+.navbarbutton:hover{
+    background-color: rgb(11, 158, 72);
+   
+}
+
+.navbar{
+    background-color: black;
+    height: 50px;
+    margin-top: 0;
+}
+
+.button:active {
+   
+    transform: translateY(20px);
+  }
+
+  .message{
+    color:blueviolet;
+    font-size:20px;
+    margin-left: 8px;
+
+  }
+
+  .otherbuttons:hover{
+      background-color:blueviolet;
+  }
+
+  .todoitem{
+      border-style:solid;
+      border-color: black;
+      padding-bottom: 8px;
+      margin-top: 8px;
+      margin-left: 8px;
+      width: 500px;
+      background-color:pink;
+      /* display:inline-block; */
+  }
+
+  .otherbuttons{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  input{
+      margin: 8px;  
+  }
+
+  label{
+    margin: 8px; 
+  }
