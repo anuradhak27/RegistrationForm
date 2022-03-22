@@ -11,6 +11,7 @@ function Navbar({setCurrentView}) {
       <ul>
           <li ><button className='navbarbutton' onClick={()=>setCurrentView("Home")}>Home</button></li>
           <li ><button className='navbarbutton' onClick={()=>setCurrentView("create")}>Create Task</button></li>
+          <li ><button className='navbarbutton' onClick={()=>setCurrentView("completedtasks")}>Completed Tasks</button></li>
           <li ><button className='navbarbutton' onClick={()=>setCurrentView("about")}>About</button></li>
       </ul>
 

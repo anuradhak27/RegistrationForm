@@ -20,12 +20,13 @@ function AddTodo({setCurrentView}) {
   const submitHandler=(e)=>{
     {console.log("form submitted")}
     e.preventDefault();
-    const data={...todo,CreatedOn:new Date(),isComplete:false}
+    const data={...todo,CreatedOn:(new Date()).toLocaleDateString('en-US'),isComplete:false}
     setIsLoading(true)
     axios.post("http://localhost:5000/todos",data)
       .then(()=>{
         setIsLoading(false)
         setCurrentView("Home")
+        alert('You have successfully added Todo. You are being directed to Home Page')
       }
       )
 
@@ -51,7 +52,7 @@ function AddTodo({setCurrentView}) {
          <input type="text" required value={todo.Name} onChange={(e)=>{setTodo(prev=>({...prev,Name:e.target.value}))}}/>
          <br/>
          <label><b>Targeted on:</b></label>
-         <input type="date" required value={todo.TargetedOn} onChange={(e)=>{setTodo(prev=>({...prev,TargetedOn:e.target.value}))}}/>
+         <input type="date" placeholder="dd/mm/yyyy" required value={todo.TargetedOn} onChange={(e)=>{setTodo(prev=>({...prev,TargetedOn:e.target.value}))}}/>
          <br/>
          <button className='otherbuttons'><b>Submit</b></button>
        </form>

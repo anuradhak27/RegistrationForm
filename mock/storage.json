@@ -1,18 +1,18 @@
 {
   "todos": [
     {
-      "Name": "read react",
-      "CreatedOn": "2022-03-15T15:41:16.688Z",
+      "Name": "read react-routers",
+      "CreatedOn": "3/22/2022",
       "TargetedOn": "2022-03-31",
-      "isComplete": false,
+      "isComplete": true,
       "id": 1
     },
     {
-      "Name": "doing",
-      "CreatedOn": "2022-03-16T06:07:51.339Z",
-      "TargetedOn": "2022-03-25",
+      "Name": "read Redux",
+      "CreatedOn": "3/22/2022",
+      "TargetedOn": "2022-04-15",
       "isComplete": false,
-      "id": 3
+      "id": 2
     }
   ]
 }

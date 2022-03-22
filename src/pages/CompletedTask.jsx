@@ -1,7 +1,7 @@
 import axios from "axios";
 import React,{useEffect,useState} from 'react'
-import TodoItem from "./TodoItem";
 import CompletedTodos from "./CompletedTodos";
+
 
 
 function ListTodos() {
@@ -21,7 +21,6 @@ useEffect(()=>{
       setError(error)
       setLoading(false)
     })
-    alert("you are in Home page")
 
   },[])
 
@@ -40,43 +39,24 @@ useEffect(()=>{
       )
 
     }
-
-    const handledone=(todoItem)=>{
-      axios.put("http://localhost:5000/todos/" +todoItem.id, {...todoItem,isComplete:true})
-      .then(
-        (response) => {
-            settodos(prev => prev.map(item => item.id === todoItem.id ? response.data : item))
-        }
-    )
-      {console.log("refresh the json file")}
- 
-}
-
-    // const totaldelete=()=>{
-    //   axios.delete("http://localhost:5000/todos")
-     
-    //   .then(
-    //     ()=>{settodos({})}
-    //   )
-    //   console.log("you have deleted everything")
-
-    // }
-    
+   
   return( 
   <div>
-   
     {
+     
       todos.map((todoItem)=>
-        
-        <TodoItem todoItem={todoItem}
-        handledone={handledone}
-        handledelete={handledelete}
-        /> 
-      )
 
-    } 
+      <CompletedTodos todoItem={todoItem} handledelete={handledelete}/>
+      
+
+      )
+    }
   </div>
   )
+
+
 }
+
+
 
 export default ListTodos;
